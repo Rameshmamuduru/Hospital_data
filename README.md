@@ -42,7 +42,7 @@ curl http://localhost:5000/patients
 ```
 cd ../frontend
 npm install
-src/App.js
+nohup node server.js > backend.log 2>&1 &
 ss -tulnp | grep 3000
 
 ```
