@@ -5,7 +5,7 @@ function App() {
   const [patients, setPatients] = useState([]);
 
   const getData = () => {
-    fetch("http://13.232.42.90:5000/patients")
+    fetch("http://localhost:5000/patients")
       .then(res => res.json())
       .then(data => setPatients(data))
       .catch(err => console.error(err));
