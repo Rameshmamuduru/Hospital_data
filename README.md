@@ -21,17 +21,7 @@ systemctl start mysql
 mysql
 ```
 ```
-CREATE DATABASE hospital_db;
-
-USE hospital_db;
-
-CREATE TABLE patients(
-id INT AUTO_INCREMENT PRIMARY KEY,
-name VARCHAR(100),
-disease VARCHAR(100)
-);
-
-INSERT INTO patients VALUES (1,'Ramesh','Fever');
+mysql -u root -prootpass < ~/Hospital_data/hospital-3tier/db/hospital.sql
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'rootpass';
 FLUSH PRIVILEGES;
